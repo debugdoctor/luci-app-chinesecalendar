@@ -1,0 +1,12 @@
+{
+	"luci-app-chinese-calendar": {
+		"description": "Show Chinese calendar in overview page",
+		"read":{
+			"file":{
+				"/usr/share/calendar/calendar20_29.json":["read"],
+				"/usr/share/calendar/calendar30_39.json":["read"],
+				"/usr/share/calendar/calendar40_49.json":["read"]
+			}
+		}
+	}
+}
