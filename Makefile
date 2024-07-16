@@ -1,4 +1,6 @@
 #
+# Copyright (c) 2024 aime_rick (https://github.com/debugdoctor/luci-app-chinesecalendar)
+#
 # This is free software, licensed under the MIT License.
 #
 
