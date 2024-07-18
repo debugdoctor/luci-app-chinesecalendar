@@ -23,7 +23,7 @@ return baseclass.extend({
 
 	load	:function() {
 		var date = new Date(Date.now());
-		var year = date.getUTCFullYear();
+		var year = date.getFullYear();
 		var calendar_list = [
 			'',
 			'',
@@ -39,13 +39,13 @@ return baseclass.extend({
 		if(info){
 			var date = new Date(Date.now());
 			var monthstr = '%04d%02d'.format(
-				date.getUTCFullYear(),
-				date.getUTCMonth() + 1,
+				date.getFullYear(),
+				date.getMonth() + 1,
 			);
 			var calendarjson = info;
-			var todayjson = calendarjson[monthstr][date.getUTCDate()];
+			var todayjson = calendarjson[monthstr][date.getDate()-1];
 			data = {
-				'calendar':"%s %s %s".format(todayjson['nongli']['nian'],todayjson['nongli']['yue'],todayjson['nongli']['ri']),
+				'lunar':"%s %s %s".format(todayjson['nongli']['nian'],todayjson['nongli']['yue'],todayjson['nongli']['ri']),
 				'solar_term':todayjson['jieqi'],
 				'holiday':getHoliday(todayjson),
 				'suitable':todayjson['yi'],
@@ -53,7 +53,7 @@ return baseclass.extend({
 			};
 		}else{
 			data = {
-				'calendar':"?",
+				'lunar':"?",
 				'solar_term':"?",
 				'holiday':"?",
 				'suitable':"?",
@@ -62,7 +62,7 @@ return baseclass.extend({
 		}
 
         var fields = [
-			_('Calendar'),						data.calendar,
+			_('Lunar'),							data.lunar,
 			_('Solar Term'),                    data.solar_term,
 			_('Holiday'),                    	data.holiday,
 			_('Suitable'),                    	data.suitable,

@@ -7,7 +7,7 @@
 
 include $(TOPDIR)/rules.mk
 
-PKG_VERSION:=1.0.0
+PKG_VERSION:=1.0.1
 LUCI_TITLE:=Show Chinese calendar in overview
 LUCI_PKGARCH:=all
 PKG_LICENSE:=MIT
