@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "template_lmo.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
+}

@@ -25,7 +25,3 @@ msgstr "宜"
 
 msgid "Avoidable"
 msgstr "忌"
-
-
-msgid "二〇二四"
-msgstr "2024"
