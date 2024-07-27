@@ -20,13 +20,6 @@ cd /path/to/openwrt
 make menuconfig
 # Select luci-app-chinesecalendar as "M" in Luci -> Applications
 
-cd package/luci-app-chinesecalendar/tools/po2lmo
-
-make && make install
-
-cd ../../../../ 
-# Back to top_dir : openwrt
-
 make package/luci-app-chinesecalendar/compile V=s
 ```
 
